@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" id="statusEntryContainer"></div>
+
+<script id="template" type="text/x-custom-template">
+    <div class="statusentry">
+        <div class="serverregionid">
+            <div id="serverRegion" class="serverRegion"></div>
+            <div id="serverIdentifier" class="serverIdentifier"></div>
+        </div>
+        <div class="eventlive">
+            <div id="eventName" class="eventName"></div>
+            <div id="live" class="live"></div>
+        </div>
+        <div id="hp" class="hp"></div>
+        <div id="spawn" class="spawn"></div>
+        </div>
+</script>
