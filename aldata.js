@@ -17,12 +17,12 @@ function PostServerStatus()
 		xhr.open("POST", "https://aldata.info/api/serverstatus", true);
 		xhr.setRequestHeader('Content-Type', 'application/json');
         
-        try{
-            xhr.send(JSON.stringify(status));
-        }
-        catch(ex){
-            // Errors suck but don't spam the client
-        }
+		try{
+		    xhr.send(JSON.stringify(status));
+		}
+		catch(ex){
+		    // Errors suck but don't spam the client
+		}
 	}
 }
 
