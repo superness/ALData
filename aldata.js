@@ -11,10 +11,18 @@ function PostServerStatus()
 
 	for(let status of statuses)
 	{
+		if(!is_object(status)) continue
+
 		let xhr = new XMLHttpRequest();
 		xhr.open("POST", "https://aldata.info/api/serverstatus", true);
 		xhr.setRequestHeader('Content-Type', 'application/json');
-		xhr.send(JSON.stringify(status));
+        
+        try{
+            xhr.send(JSON.stringify(status));
+        }
+        catch(ex){
+            // Errors suck but don't spam the client
+        }
 	}
 }
 
@@ -40,7 +48,13 @@ function GetServerStatuses(callback)
             callback(JSON.parse(xmlHttp.responseText));
     }
     xmlHttp.open("GET", "https://www.aldata.info/api/ServerStatus", true); // true for asynchronous 
-	xmlHttp.send(null);
+
+    try{
+        xmlHttp.send(null);
+    }
+    catch(ex){
+        // Errors suck but don't spam the client
+    }
 }
 
 PostServerStatus()
