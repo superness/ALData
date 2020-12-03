@@ -7,23 +7,12 @@ function PostServerStatus()
 		parent.S[e].server_identifier = parent.server_identifier
 
 		return parent.S[e]
-	})
-
-	for(let status of statuses)
-	{
-		if(!is_object(status)) continue
-
-		let xhr = new XMLHttpRequest();
-		xhr.open("POST", "https://aldata.info/api/serverstatus", true);
-		xhr.setRequestHeader('Content-Type', 'application/json');
-        
-		try{
-		    xhr.send(JSON.stringify(status));
-		}
-		catch(ex){
-		    // Errors suck but don't spam the client
-		}
-	}
+    })
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://aldata.info/api/serverstatuses", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(statuses));
 }
 
 // GetServerStatuses(s => { show_json(s) });
@@ -48,13 +37,7 @@ function GetServerStatuses(callback)
             callback(JSON.parse(xmlHttp.responseText));
     }
     xmlHttp.open("GET", "https://www.aldata.info/api/ServerStatus", true); // true for asynchronous 
-
-    try{
-        xmlHttp.send(null);
-    }
-    catch(ex){
-        // Errors suck but don't spam the client
-    }
+    xmlHttp.send(null);
 }
 
 PostServerStatus()
