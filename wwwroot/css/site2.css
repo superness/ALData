@@ -1,0 +1,124 @@
+﻿body {
+    background: #EBEBEB;
+}
+
+a {
+    color: #389393;
+}
+
+a:hover {
+    color: #389393;
+    text-decoration: none;
+}
+
+a.titleLink {
+    font-size: 50px;
+}
+
+div.titleBar {
+    text-align: left;
+    width: 75%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+div.titleBarBack {
+    width: 100%;
+    background: #1e1e1e;
+}
+
+div.mainContainer {
+    width: 75%;
+    min-height: 100px;
+    padding-top: 50px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.eventsSectionTitle {
+    font-size: 48px;
+    color: #f5a25d;
+    background: #1e1e1e;
+}
+
+div.eventSectionContainer {
+    border: 6px solid #1e1e1e;
+    margin-top: 25px;
+    
+}
+
+div.eventServerTitleContainer {
+    padding-top: 5px;
+    border-bottom: 2px solid #1e1e1e;
+}
+
+div.eventServerIdentifierBadge {
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+div.upcomingEventEntry {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.upcomingEventName {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fa7f72;
+}
+
+div.upcomingBossInfo {
+    font-size: 30px;
+}
+
+div.activeEventEntry {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.activeEventName {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fa7f72;
+}
+
+div.activeBossInfo {
+    font-size: 30px;
+}
+
+div.activeBossLocation {
+    font-size: 30px;
+}
+
+
+div.engagedEventEntry {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.engagedEventName {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fa7f72;
+}
+
+div.engagedBossInfo {
+    font-size: 30px;
+}
+
+div.engagedBossLocation {
+    font-size: 30px;
+}

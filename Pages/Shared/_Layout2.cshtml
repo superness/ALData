@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=800px" />
+    <title>@ViewData["Title"] - ALData</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site2.css" />
+    <link rel="stylesheet" href="~/css/sitemore.css" />
+</head>
+<body>
+    <header>
+        <div class="titleBarBack">
+            <div class="titleBar">
+                <a class="titleLink" asp-area="" asp-page="/Index">ALData</a>
+            </div>
+        </div>
+    </header>
+    <div class="mainContainer">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
