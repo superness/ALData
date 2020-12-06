@@ -1,6 +1,6 @@
 function PostServerStatus()
 {
-	let statuses = Object.keys(parent.S).map(e => 
+	let statuses = Object.keys(parent.S).filter(k => is_object(parent.S[k])).map(e => 
 	{
 		parent.S[e].eventname = e
 		parent.S[e].server_region = parent.server_region
@@ -8,7 +8,7 @@ function PostServerStatus()
 
 		return parent.S[e]
     })
-    
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "https://aldata.info/api/serverstatuses", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
